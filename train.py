@@ -27,8 +27,8 @@ import fim
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--model_path", type=str, default="bigcode/santacoder")
-    parser.add_argument("--dataset_name", type=str, default="bigcode/the-stack-dedup")
-    parser.add_argument("--subset", type=str, default="data")
+    parser.add_argument("--dataset_name", type=str, default="bigcode/the-stack")
+    parser.add_argument("--subset", type=str, default="data/c-sharp")
     parser.add_argument("--split", type=str, default="train")
     parser.add_argument("--size_valid_set", type=int, default=4000)
     parser.add_argument("--streaming", action="store_true")
@@ -57,8 +57,8 @@ def get_args():
     parser.add_argument("--eval_freq", default=1000, type=int)
     parser.add_argument("--save_freq", default=1000, type=int)
 
-    parser.add_argument("--fim_rate", type=float, default=0)
-    parser.add_argument("--fim_spm_rate", type=float, default=0)
+    parser.add_argument("--fim_rate", type=float, default=0.5)
+    parser.add_argument("--fim_spm_rate", type=float, default=0.5)
     return parser.parse_args()
 
 
